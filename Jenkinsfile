@@ -15,7 +15,6 @@ pipeline {
         }
 		
    stages {
-
      stage('checkout Terraform files to deploy infra') {
       steps {
         checkout scm
