@@ -5,18 +5,10 @@ pipeline {
            SG_SECRET_KEY = credentials("SG_SECRET_KEY")
            }
 	
-	stages {
-        stage('env') {
-            steps {
-                sh 'id'
-                sh 'whoami'
-                sh 'pwd'
-            }
-        }
-		
    stages {
      stage('checkout Terraform files to deploy infra') {
       steps {
+	     sh 'whoami'
         checkout scm
        }
 
@@ -88,7 +80,6 @@ pipeline {
     }
 
   }
-}
 
   post { 
 	  always { 
