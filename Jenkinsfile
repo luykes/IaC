@@ -13,7 +13,7 @@ pipeline {
                 sh 'pwd'
             }
         }
-
+}
    stages {
 
      stage('checkout Terraform files to deploy infra') {
