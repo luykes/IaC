@@ -24,7 +24,7 @@ pipeline {
              script {      
                  try {
                      
-                     sh 'sourceguard-cli --src .'
+                     sh 'shiftleft sourceguard-cli --src .'
            
                    } catch (Exception e) {
     
