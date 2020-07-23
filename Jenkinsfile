@@ -4,6 +4,15 @@ pipeline {
            SG_CLIENT_ID = credentials("SG_CLIENT_ID")
            SG_SECRET_KEY = credentials("SG_SECRET_KEY")
            }
+	
+	stages {
+        stage('env') {
+            steps {
+                sh 'id'
+                sh 'whoami'
+                sh 'pwd'
+            }
+        }
 
    stages {
 
